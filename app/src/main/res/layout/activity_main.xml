@@ -6,13 +6,130 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextNumber_2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Enter Second Number"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_1" />
+
+    <EditText
+        android:id="@+id/editTextNumber_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Enter First Number"
+        android:inputType="numberSigned"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber_2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_1" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="-"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber_2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMul"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlus"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_1" />
+
+    <Button
+        android:id="@+id/buttonMul"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="×"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber_2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDiv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMinus"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_1" />
+
+    <Button
+        android:id="@+id/buttonDiv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="÷"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonMul"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_1" />
+
+    <Button
+        android:id="@+id/buttonEq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:insetLeft="20dp"
+        android:insetTop="0dp"
+        android:insetRight="20dp"
+        android:insetBottom="0dp"
+        android:text="="
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_2" />
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:text="Result: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEq" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
